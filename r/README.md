@@ -5,10 +5,35 @@ R Language
 > and statisticians, who firmly believe this to be the natural
 > order of our language.
 
-Categories
+Files
 ==========
 
-> 'hmmmmm'
+#### Basics
+- basics.R
+- logic.R
+
+#### Data Types
+- vector.R
+- frame.R
+- list.R
+- matrix.R
+- factor.R
+
+#### Functions
+- apply.R
+- distro.R
+- meta.R
+
+#### Working with Data
+- aggregate.R
+- regex.R
+
+#### Graphics
+- graphics.R
+- plot.R
+
+#### Other
+- error.R
 
 Resources
 =========
