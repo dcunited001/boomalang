@@ -1,5 +1,5 @@
 SML Language
-----------
+------------
 
 > Learning SML for the Coursera Proglang class.
 
