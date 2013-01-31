@@ -1,8 +1,7 @@
-
 (* Function *)
 (* ================================ *)
 fun pow (x: int,y: int) =
-  if y=0 
+  if y=0
   then 1
   else x * pow(x,y-1)
 
@@ -24,7 +23,7 @@ fun sort_pair (pr : int*int) =
 (* notice that variables assigned to functions
    print out differentley than otherwise *)
 
-(* note that for functions, 
+(* note that for functions,
    - a function is a value
    - a functions name has already been defined as a symbol
        within the function definition *)
@@ -58,7 +57,7 @@ fun seconds (xs : (int * int) list) =
     if null xs
     then []
     else (#2 (hd xs))::(seconds(tl xs))
-    
+
 fun sum_pair_list2 (xs : (int * int) list) =
     (sum_list (firsts xs)) + (sum_list (seconds xs))
 
@@ -77,7 +76,7 @@ for type-checking:
 result is a new type in the environment:
   (t1, ... ,tn) -> t
 
-the overall result of function declaration 
+the overall result of function declaration
   - is to give the symbol x0 the new type: (t1, ... ,tn) -> t
   - x0 has this type through the rest of the program
   - arguments can only me used in expression e
@@ -85,7 +84,7 @@ the overall result of function declaration
 *)
 
 (* FUNCTION CALLS *)
-(* ================================ 
+(* ================================
 syntax: e0 (e1, ... ,en)
   - parenthesis optional if only one argument
 
