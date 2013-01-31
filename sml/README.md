@@ -8,6 +8,7 @@ Files
 
 #### Basics
 - basics.sml
+- logic.sml
 - functions.sml
 
 #### Other
