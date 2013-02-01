@@ -9,20 +9,13 @@
 // add iostream for IO (cout)
 #include <iostream>;
 
-// main()
-// ===========================
-// main is recognized as the entry point for cpp programs
-
-
-int main(int argc, char *argv[])
-{
-  using namespace std;
-  cout << "Hello world!" << endl;
-
-  basicIO();
-
-  return 0;
-}
+// Common IO problem:
+// When trying to use cin or cout,
+//   the compiler says cin or cout
+//   is an “undeclared identifier”
+// Solution:
+//   place this at the top of your program:
+using namespace std;
 
 // basic IO
 // ===========================
@@ -38,6 +31,23 @@ void basicIO()
   cin >> name;
 
   cout << "your name is: " << name << endl;
+}
+
+// main()
+// ===========================
+// main is recognized as the entry point for cpp programs
+//   code execution will begin here
+
+// main() can be given arguments!
+//   these are the arguments passed in from the command line
+int main(int argc, char *argv[])
+{
+  using namespace std;
+  cout << "Hello world!" << endl;
+
+  basicIO();
+
+  return 0;
 }
 
 // Fundamental Data Types
