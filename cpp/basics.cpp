@@ -9,6 +9,13 @@
 // add iostream for IO (cout)
 #include <iostream>;
 
+
+// using
+// ===========================
+// the using keyword introduces a name from a namespace
+//   into the current declarative region.
+
+// ___________________________
 // Common IO problem:
 // When trying to use cin or cout,
 //   the compiler says cin or cout
@@ -20,8 +27,7 @@ using namespace std;
 // basic IO
 // ===========================
 // must include <iostream>
-void basicIO()
-{
+void basicIO(){
   string name;
 
   // endl supplies end-line to cout??
@@ -40,13 +46,15 @@ void basicIO()
 
 // main() can be given arguments!
 //   these are the arguments passed in from the command line
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]){
   using namespace std;
   cout << "Hello world!" << endl;
 
   basicIO();
 
+  // the return value indicates the success of the program
+  //   0  ==> success
+  //   >0 ==> error
   return 0;
 }
 
