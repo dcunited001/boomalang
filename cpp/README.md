@@ -4,20 +4,24 @@ C++ Language
 Files
 =====
 - basics.cpp
+- vars.cpp
 - namespace.cpp
+- controlFlow.cpp
+- classes.cpp
 
 C++ Filetypes:
 ==============
 
 C++ has a few filetypes it uses:
-
 - *.cpp   => source files      // *.cpp is preferred to *.cc
 - *.o     => object files      // *.o or *.obj
 - *.h     => header files      //
 
-#### Source Files
+#### Source Files (*.cpp)
 
-#### Header Files
+
+#### Header Files (*.h)
+
 
 Compiling and Linking
 =====================
