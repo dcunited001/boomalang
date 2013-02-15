@@ -32,6 +32,7 @@ Future Langs
 ============
 These are languages that I'm excited about learning,
 but don't yet have experience with.
+- GOOOO!!!!!! (thx Zeus(Rails) for showing me that Go is as cool as Google says it is)
 - Python
 - Clojure (this looks a little more fun than scala)
 - Matlab (cuz it's like math and stuff - fourier teh winz)
