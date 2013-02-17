@@ -49,5 +49,6 @@ Complete Langs
 These are langs that are complete (or mostly complete anyways.
 - n/a
 
-
+#### Hyperpolyglot - for learning new languages
+http://hyperpolyglot.org/
 
