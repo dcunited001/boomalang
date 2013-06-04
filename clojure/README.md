@@ -45,8 +45,8 @@ Can't compare ints/floats, *using =*
 Can compare ints/floats, *using ==*
     (= true (== 64 64.0))
 
-List Operations
-===============
+List Ops
+========
 
 Create a list:
     (list 1 2 3 4 5)
@@ -69,7 +69,7 @@ Create a list:
     (conj '(:a :b :c :d) :e)
     :=> (:e :a :b :c :d)
 
-Vector Operations
+Vector Ops
 =================
 
 Create vectors with [] or vec
@@ -98,8 +98,8 @@ Lists & Vectors can be compared for equality
     (= true
       (= '(1 2 3) (vec '(1 2 3))))
 
-Set Operations
-==============
+Set Ops
+=======
 
 Sets are *mathematic* sets (unique values only)
     (= #{1 2 3} '(1 2 3 1 2 3))
@@ -114,6 +114,66 @@ Find the Union, Intersection and Difference of sets
     (clojure.set/union #{1 2 3 4} #{2 3 5})
     (clojure.set/intersection #{1 2 3 4} #{2 3 5})
     (clojure.set/difference #{1 2 3 4 5} #{2 3 5})
+
+Map Ops
+=======
+
+Map symbols to keys with `hash-map`
+
+    (hash-map :foo "foo" :bar "bar")
+    :=> {:a 1 :b 2}
+
+Symbols must have values
+
+    (= {a:1} (hash-map :a 1))
+
+Count works with maps too
+
+    (count {:a 1 :b 2})
+    :=> 2
+
+Get value for key with `get`
+
+    (get {:a 1 :b 2} :b)
+    :=> 2
+
+A map **is** a function, taking a key as an arg
+
+    ({:foo "foo" :bar "bar"} :foo)
+    :=> "foo"
+
+A key **is** a function and returns a value when taking a map as an arg
+
+    (:foo {:foo "foo" :bar "bar"})
+    :=> "foo"
+
+Integers and Strings can be Keys too
+
+    {1 "foo" 2 "bar"}
+    {"baz" 3 "qux" 4}
+
+Returns Nil when a key can't be found
+
+    ({:foo "foo"} :bar)
+    :=> nil
+    (get {:bar "bar"} :baz)
+    :=> nil
+
+You can provide a default to `get`
+
+    (get {:foo "foo" :bar "bar"} :baz :not-found)
+    :=> :not-found
+
+Use `contains?` to determine whether a key is present or not
+
+    (contains? {:a "a" :b "b"} :b))
+    :=> true
+    (contains? {:a "a" :b "b"} :z))
+    :=> false
+
+Maps are **immutable** but new maps can be created
+
+
 
 Error Handling
 ==============
