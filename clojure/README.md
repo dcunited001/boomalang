@@ -101,6 +101,15 @@ Data Types
 - `\\` - backslash
 - `\u30DE` - a unicode katakana char
 
+Functions
+=========
+
+Clojure uses *prefix notation*, instead of the *infix notation* from C.
+
+There are several advantages to this:
+- eliminates the problem of operator precedence - there is no difference between operator notation and regular function calls
+- this uniform structure forms the basis for the flexibility of Lisps
+
 List Basics
 ===========
 
