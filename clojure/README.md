@@ -33,16 +33,17 @@ Basics
 
 #### Equality
 
-Test equality with (= )
-
-```
-(= 1 1)
-```
+Test equality, using =
+    (= 1 1)
 
 "Polish Prefix Notation" for arithmatic operators:
-```
-(= 4 (+ 2 2))
-```
+    (= 4 (+ 2 2))
+
+Can't compare ints/floats, *using =*
+    (not= true (= 64 64.0))
+
+Can compare ints/floats, *using ==*
+    (= true (== 64 64.0))
 
 List Operations
 ===============
@@ -84,6 +85,16 @@ First/Last
     :=> 11
     (last [11 22 33])
     :=> 33
+
+Select elements with `nth` **Zero-Indexing**
+    (nth [11 22 33] 2)
+    :=> 33
+
+Slice elements with `subvec` (but don't try to access invalid values)
+    (subvec [0 1 2 3 4] 0 2)
+    :=> [0 1]
+
+Lists & Vectors can be compared for equality
 
 Error Handling
 ==============
