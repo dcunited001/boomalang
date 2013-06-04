@@ -16,6 +16,9 @@ Clojure offers:
   - and call clojure from java
 - persistent collections
 
+Clojure filetypes:
+- `*.clj` - Sourcefile
+
 Install
 =======
 
@@ -23,20 +26,33 @@ On OSX: `brew install clojure`
 
 Enter REPL with `clj`
 
-Files
-=====
+Install Lein with: `brew install leiningen`
 
+Basics
+======
 
+#### Equality
 
-Clojure Filetypes
-=================
+Test equality with (= )
+
+```clojure
+(= 1 1)
+```
+
+"Polish Prefix Notation" for arithmatic operators:
+```
+(= 4 (+ 2 2))
+```
+
+List Operations
+===============
 
 
 
 Resources
 =========
 
-- Clojure [Koans](https://github.com/functional-koans/clojure-koans)
+- **Clojure [Koans](https://github.com/functional-koans/clojure-koans) (requires `leiningen`)**
 - [Learn Clojure](http://learn-clojure.com/)
 - [Learn Clojure Videos](http://learn-clojure.com/closure_videos.html)
 - [Brian Will Clojure Videos](http://www.youtube.com/watch?v=Aoeav_T1ARU&list=PLAC43CFB134E85266) (2009)
