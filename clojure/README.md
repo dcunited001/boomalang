@@ -53,6 +53,54 @@ Can compare ints/floats, *using ==*
 
     (= true (== 64 64.0))
 
+Data Types
+==========
+
+#### Integers
+
+- decimal - `127`
+- hex - `0x7F`
+- octal - `0177`
+- radix32 - `32r3V`
+- binary literal - `2r01111111`
+
+#### Floating Point
+
+- `1.17`
+- `+1.22`
+- `-2`
+- `366e7`
+- `32e-14`
+- `10.7e-3`
+
+#### Rationals
+
+- `22/7`
+- `7/22`
+- `-103/4`
+
+#### Symbols
+
+
+
+#### Keywords
+
+- `:chumby`
+- `:2`
+- `:?`
+
+#### Strings
+
+- `"yup - this is a string - surprise"`
+
+#### Characters
+
+- `\a` - lowercase a
+- `\A` - uppercase a
+- `\u0042` - unicode uppercase B
+- `\\` - backslash
+- `\u30DE` - a unicode katakana char
+
 List Ops
 ========
 
@@ -196,12 +244,15 @@ Use `contains?` to determine whether a key is present or not
 
 Maps are **immutable** but new maps can be created
 
+    assoc
+    dissoc
 
 
 Error Handling
 ==============
 
 Try/Catch:
+
     (= "No dice!" (try
       (pop '())
       (catch IllegalStateException e
