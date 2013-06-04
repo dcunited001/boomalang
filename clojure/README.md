@@ -95,6 +95,25 @@ Slice elements with `subvec` (but don't try to access invalid values)
     :=> [0 1]
 
 Lists & Vectors can be compared for equality
+    (= true
+      (= '(1 2 3) (vec '(1 2 3))))
+
+Set Operations
+==============
+
+Sets are *mathematic* sets (unique values only)
+    (= #{1 2 3} '(1 2 3 1 2 3))
+
+Count sets like other collections
+    (= 5 #{1 2 3 4 5})
+
+Convert other collections to sets
+    (= #{1 2 3} '(1 2 3 1 2 3))
+
+Find the Union, Intersection and Difference of sets
+    (clojure.set/union #{1 2 3 4} #{2 3 5})
+    (clojure.set/intersection #{1 2 3 4} #{2 3 5})
+    (clojure.set/difference #{1 2 3 4 5} #{2 3 5})
 
 Error Handling
 ==============
