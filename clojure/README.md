@@ -48,35 +48,51 @@ List Operations
 ===============
 
 Create a list:
-```
-(list 1 2 3 4 5)
-'(1 2 3 4 5)
-(quote (1 2 3 4 5))
-```
+    (list 1 2 3 4 5)
+    '(1 2 3 4 5)
+    (quote (1 2 3 4 5))
 
 `first` - Head:
-```
-(first '(1 2 3 4 5))
-:=> 1
-```
+    (first '(1 2 3 4 5))
+    :=> 1
 
 `rest` - Tail:
-```
-(rest '(1 2 3 4 5))
-:=> '(2 3 4 5))
-```
+    (rest '(1 2 3 4 5))
+    :=> '(2 3 4 5))
 
 `cons` - Push (Construct):
-```
-(cons :a '(:b :c :d :e))
-:=> (:a :b :c :d :e)
-```
+    (cons :a '(:b :c :d :e))
+    :=> (:a :b :c :d :e)
 
 `conj` - Unshift (Conjoin):
-```
-(conj '(:a :b :c :d) :e)
-:=> (:e :a :b :c :d)
-```
+    (conj '(:a :b :c :d) :e)
+    :=> (:e :a :b :c :d)
+
+Vector Operations
+=================
+
+Create vectors with [] or vec
+    [11 22 33]
+    (vec '(11 22 33))
+
+Conjoining Vectors appends elements (conj prepends for lists)
+    conj [:a :b :c :d] :e
+    :=> [:a :b :c :d :e] :=> not [:e :a :b :c :d]
+
+First/Last
+    (first [11 22 33])
+    :=> 11
+    (last [11 22 33])
+    :=> 33
+
+Error Handling
+==============
+
+Try/Catch:
+    (= "No dice!" (try
+      (pop '())
+      (catch IllegalStateException e
+        "No dice!")))
 
 Resources
 =========
