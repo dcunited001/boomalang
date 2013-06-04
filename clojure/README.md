@@ -31,41 +31,54 @@ Install Lein with: `brew install leiningen`
 Basics
 ======
 
+#### Comments
+
+    :=> comment using smiley faces (no winking!)
+
 #### Equality
 
 Test equality, using =
+
     (= 1 1)
 
 "Polish Prefix Notation" for arithmatic operators:
+
     (= 4 (+ 2 2))
 
 Can't compare ints/floats, *using =*
+
     (not= true (= 64 64.0))
 
 Can compare ints/floats, *using ==*
+
     (= true (== 64 64.0))
 
 List Ops
 ========
 
 Create a list:
+
     (list 1 2 3 4 5)
     '(1 2 3 4 5)
     (quote (1 2 3 4 5))
 
 `first` - Head:
+
     (first '(1 2 3 4 5))
     :=> 1
 
 `rest` - Tail:
+
     (rest '(1 2 3 4 5))
     :=> '(2 3 4 5))
 
 `cons` - Push (Construct):
+
     (cons :a '(:b :c :d :e))
     :=> (:a :b :c :d :e)
 
 `conj` - Unshift (Conjoin):
+
     (conj '(:a :b :c :d) :e)
     :=> (:e :a :b :c :d)
 
@@ -73,28 +86,34 @@ Vector Ops
 =================
 
 Create vectors with [] or vec
+
     [11 22 33]
     (vec '(11 22 33))
 
 Conjoining Vectors appends elements (conj prepends for lists)
+
     conj [:a :b :c :d] :e
     :=> [:a :b :c :d :e] :=> not [:e :a :b :c :d]
 
 First/Last
+
     (first [11 22 33])
     :=> 11
     (last [11 22 33])
     :=> 33
 
 Select elements with `nth` **Zero-Indexing**
+
     (nth [11 22 33] 2)
     :=> 33
 
 Slice elements with `subvec` (but don't try to access invalid values)
+
     (subvec [0 1 2 3 4] 0 2)
     :=> [0 1]
 
 Lists & Vectors can be compared for equality
+
     (= true
       (= '(1 2 3) (vec '(1 2 3))))
 
@@ -102,15 +121,19 @@ Set Ops
 =======
 
 Sets are *mathematic* sets (unique values only)
+
     (= #{1 2 3} '(1 2 3 1 2 3))
 
 Count sets like other collections
+
     (= 5 #{1 2 3 4 5})
 
 Convert other collections to sets
+
     (= #{1 2 3} '(1 2 3 1 2 3))
 
 Find the Union, Intersection and Difference of sets
+
     (clojure.set/union #{1 2 3 4} #{2 3 5})
     (clojure.set/intersection #{1 2 3 4} #{2 3 5})
     (clojure.set/difference #{1 2 3 4 5} #{2 3 5})
