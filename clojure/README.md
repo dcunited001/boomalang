@@ -101,6 +101,21 @@ Data Types
 - `\\` - backslash
 - `\u30DE` - a unicode katakana char
 
+List Basics
+===========
+
+List is the classic collection type in Lisps.  Here's a Literal List:  `(foo bar baz)`
+
+In Lisps, if the first item is a function, then:
+- the first item is interpreted as a function
+- and the rest of the items are interpreted as it's arguments
+
+If the first item is instead a macro or special form, then:
+- the remaining items in the list aren't necessarily evaluated.
+- but are processed as definied by the macro/operator.
+
+Unlike some Lisps, the empty list `()` in clojure is not the same as `nil`
+
 List Ops
 ========
 
