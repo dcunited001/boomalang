@@ -35,7 +35,7 @@ Basics
 
 Test equality with (= )
 
-```clojure
+```
 (= 1 1)
 ```
 
@@ -47,7 +47,36 @@ Test equality with (= )
 List Operations
 ===============
 
+Create a list:
+```
+(list 1 2 3 4 5)
+'(1 2 3 4 5)
+(quote (1 2 3 4 5))
+```
 
+`first` - Head:
+```
+(first '(1 2 3 4 5))
+:=> 1
+```
+
+`rest` - Tail:
+```
+(rest '(1 2 3 4 5))
+:=> '(2 3 4 5))
+```
+
+`cons` - Push (Construct):
+```
+(cons :a '(:b :c :d :e))
+:=> (:a :b :c :d :e)
+```
+
+`conj` - Unshift (Conjoin):
+```
+(conj '(:a :b :c :d) :e)
+:=> (:e :a :b :c :d)
+```
 
 Resources
 =========
