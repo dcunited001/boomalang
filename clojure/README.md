@@ -28,6 +28,21 @@ Enter REPL with `clj`
 
 Install Lein with: `brew install leiningen`
 
+Resources
+=========
+
+Learning Clojure:
+- **Clojure [Koans](https://github.com/functional-koans/clojure-koans) (requires `leiningen`)**
+- [Learn Clojure](http://learn-clojure.com/)
+- [Learn Clojure Videos](http://learn-clojure.com/closure_videos.html)
+- [Brian Will Clojure Videos](http://www.youtube.com/watch?v=Aoeav_T1ARU&list=PLAC43CFB134E85266) (2009)
+
+Using Clojure:
+- [Parsing Binary with_Gloss](http://stackoverflow.com/questions/749871/how-to-parse-binary-files-in-clojure)
+- [Gloss Github](https://github.com/ztellman/gloss/wiki/Introduction)
+
+Testing in Clojure
+- [Clojure Test API](http://richhickey.github.io/clojure/clojure.test-api.html)
 Basics
 ======
 
@@ -281,11 +296,3 @@ Try/Catch:
       (pop '())
       (catch IllegalStateException e
         "No dice!")))
-
-Resources
-=========
-
-- **Clojure [Koans](https://github.com/functional-koans/clojure-koans) (requires `leiningen`)**
-- [Learn Clojure](http://learn-clojure.com/)
-- [Learn Clojure Videos](http://learn-clojure.com/closure_videos.html)
-- [Brian Will Clojure Videos](http://www.youtube.com/watch?v=Aoeav_T1ARU&list=PLAC43CFB134E85266) (2009)
