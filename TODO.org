@@ -1,0 +1,12 @@
+* Boomalang
+
+** Currently Learning
+*** Clojure
+
+** On Deck
+*** Processing.js
+*** Processing
+*** Go
+*** Python
+
+
